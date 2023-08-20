@@ -1,0 +1,5 @@
+This is a repo to store samples and utils
+----------------------------------------
+db-utils
+--------
+wrapper for CRUD operations on MongoDB using the node libraries
