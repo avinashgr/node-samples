@@ -1,0 +1,22 @@
+*******************************
+READ ME FOR THE STARTER PROJECT
+*******************************
+this is a template for any typescript project
+The package,json has the following libraries included:
+tsc -for typescript compilation
+nodemon - for hot loading the code 
+Folder structure
+----------------
+src - has all the source code
+.env - has all the config properties
+index.ts - is the starter file 
+
+package.json entries
+--------------------
+scripts block - has dev and build scripts
+the build script will need to be executed for transpiling the code to js
+the dev script will need to be run as "npm run dev"
+
+dev dependencies block - has nodemon, tsc and ts-node need to be there for the dev
+
+dependencies block - the packages needed for API calls - axios, postman
