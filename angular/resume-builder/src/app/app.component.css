@@ -1,198 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 :host {
-    --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
-    --hot-red: oklch(61.42% 0.238 15.34);
-    --orange-red: oklch(63.32% 0.24 31.68);
-    --orange-button: oklch(75.29% 0.168 65.65);
     --off-white: oklch(96.76% 0.039 99.53);
     --crazy-white: oklch(100% 0 102.07);
-
-    --gray-900: oklch(19.37% 0.006 300.98);
-    --gray-700: oklch(36.98% 0.014 302.71);
-    --gray-400: oklch(70.9% 0.015 304.04);
-
-    --red-to-pink-to-purple-vertical-gradient: linear-gradient(
-      180deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(
-      90deg,
-      var(--orange-red) 0%,
-      var(--vivid-pink) 50%,
-      var(--electric-violet) 100%
-    );
-
-
-
-    --pill-accent: var(--bright-blue);
-
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-      "Segoe UI Symbol";
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* border radius */
-    --font-size-s: 0.9rem;
-    --font-size-n: 1rem;
-    --font-size-m: 1.12rem;
-    --font-size-l: 1.5rem;
-    /* border radius */
-    --border-radius-s: 8px;
-    --border-radius-m: 5px;
-    --border-radius-circle: 50%;
-  }
-  *{
+    
+}
+*{
     font-family: "Poppins", sans-serif;
     padding: 0;
     margin: 0;
   }
 
-  main {
-    background:var(--gray-700);
-    position: fixed;
-    width: 100%;
-  }
+.site-body {
+    padding-top:160px; /*add buffer to account for the header and the image */
+    height: 100vh;
+    overflow: scroll;
+    background-color: var(--off-white);
+    text-align:center;
+}
 
-  .header {
-    display: inline-block;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--off-white);
-    /* border: 1px solid wheat; */
-    width: 50%;
-    margin-left: 10px;
-    padding: 15px;
-    text-align: center;
-    vertical-align:top;
-  }
+.content-body {
+    height: 75vh;
+    width: 700px;
+    background-color: bisque;
+    margin: 0 auto;
 
-  .logo {
-    display: inline;
-    align-items: center;
-    justify-content: center;
-    color: var(--off-white);
-    /* border: 1px solid wheat; */
-    width: 100%;
-    text-align: center;
-    position: fixed;
-  }
-
-  .logo img{
-    height:15vh;
-    border-radius: var(--border-radius-circle);
-    border: 10px solid ;
-  }
-
-  .sidenav {
-    position:relative; z-index:10;
-    align-items: center;
-    justify-content: space-between;
-    float:right;
-  }
-
-  .sidenav ul{
-    list-style: none;
-  }
-  .sidenav ul li{
-    background: var(--gray-400);
-    /* border-radius: var(--border-radius-m); */
-    font-size: var(--font-size-m);
-    padding:5px 8px;
-    width: 150px;
-    text-align: center;
-    
-  }
-
-  .sidenav .nav-menu{
-    display: flex;
-    gap: 10px;
-    margin: 0px;
-    padding: 10px;
-  }
-
-  .sidenav .nav-menu .nav-item a{
-    text-decoration: none;
-    color: var(--off-white)
-  }
-  .icon{
-    display: none;
-  }
-  .icon-bar {
-    display: none;
-    width: 35px;
-    height: 2px;
-    background-color: var(--crazy-white);
-    margin: 6px 0;
-  }
-  @media screen and (max-width: 1000px) {
-    .header {
-      display:none
-    }
-    .main{
-      width: 100%;
-      height: 50px
-    }
-    .logo {
-      text-align: left;
-    }
-    .icon{
-      display: block;
-      z-index: 50;
-      cursor: grab;
-      position: relative;
-      margin-left: auto;
-      padding: 10px;
-    }
-    .icon-bar {
-      display: block;
-      margin-left: auto;
-
-    }
-    .sidenav {
-      float:none;
-      padding: 0.5px;
-    }
-    .sidenav .nav-menu{
-      display: block;
-      float: right;
-      padding: 0px 10px;
-      min-width: 100px;
-      transition: all 0.5s ease-in;
-    }
-    .sidenav ul{
-      background-color: var(--gray-700);
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      overflow:hidden;
-      height:0;
-    }
-    .sidenav:hover ul {
-      height: 200px;      
-    }
-    .sidenav:hover .nav-menu{
-      display: block;
-      transition: all 1s ease-in;
-    }
-
-    .sidenav .icon-bar{
-      transition: all 1s ease-in;
-    }
-    .sidenav:hover .icon-bar{
-      /* height: 5px;
-      width: 5px; */
-      border-radius: var(--border-radius-circle);
-      transform: scaleX(0.2) scaleY(3);
-    }
-    
-
-    .sidenav ul li{
-      margin-top: 10px;
-    }
-    
-  }
+}

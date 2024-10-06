@@ -54,6 +54,7 @@
     margin: 0;
   }
 
+
   main {
     background:var(--gray-700);
     position: fixed;
