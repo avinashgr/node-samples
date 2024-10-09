@@ -60,7 +60,14 @@
     position: fixed;
     width: 100%;
   }
-
+  .home{
+    display: inline;
+    align-items: center;
+    color: var(--off-white);
+    /* border: 1px solid wheat; */
+    margin-left: 10px;
+    vertical-align:top;
+  }
   .header {
     display: inline-block;
     align-items: center;
@@ -106,7 +113,7 @@
     /* border-radius: var(--border-radius-m); */
     font-size: var(--font-size-m);
     padding:5px 8px;
-    width: 150px;
+    width: 100px;
     text-align: center;
     
   }
@@ -132,7 +139,7 @@
     background-color: var(--crazy-white);
     margin: 6px 0;
   }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1500px) {
     .header {
       display:none
     }

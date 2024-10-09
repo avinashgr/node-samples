@@ -16,12 +16,57 @@
     overflow: scroll;
     background-color: var(--off-white);
     text-align:center;
+    display: flex;
+  
+    /* Then we define the flow direction 
+       and if we allow the items to wrap 
+     * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    flex-flow: row wrap;
+    
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    column-gap: 0.1em;
 }
 
-.content-body {
-    height: 75vh;
-    width: 700px;
+.main-content-body {
+    height: 100vh;
+    width: 800px;
     background-color: bisque;
-    margin: 0 auto;
+    margin: 10px auto;
+    border-radius: 25px;
+
+}
+
+.left-pane {
+    height: 100vh;
+    min-width: 500px;
+    background-color: bisque;
+    margin: 10px auto;
+    border-radius: 25px;
+
+}
+.right-pane {
+    height: 100vh;
+    min-width: 500px;
+    background-color: bisque;
+    margin: 10px auto;
+    border-radius: 25px;
+
+}
+@media screen and (max-width: 1500px) {
+    .site-body{
+        flex-flow: column;
+    }
+
+    .left-pane, .right-pane {
+        display: none;
+    }
+
+    .main-content-body {
+        width: 80%;
+    }
 
 }
