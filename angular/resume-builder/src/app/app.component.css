@@ -2,6 +2,7 @@
 :host {
     --off-white: oklch(96.76% 0.039 99.53);
     --crazy-white: oklch(100% 0 102.07);
+    --bisque:oklch(93.29% 0.0514 71.85)
     
 }
 *{
@@ -27,32 +28,31 @@
     flex-flow: row wrap;
     
     /* Then we define how is distributed the remaining space */
-    justify-content: space-around;
-    column-gap: 0.1em;
+    justify-content: left;
 }
 
 .main-content-body {
     height: 100vh;
-    width: 800px;
-    background-color: bisque;
-    margin: 10px auto;
+    width: 70%;
+    background-color: var(--bisque);
+    margin: 1px auto;
     border-radius: 25px;
 
 }
 
 .left-pane {
     height: 100vh;
-    min-width: 500px;
-    background-color: bisque;
-    margin: 10px auto;
+    width: 10%;
+    background-color: var(--bisque);
+    margin: 2px auto;
     border-radius: 25px;
 
 }
 .right-pane {
     height: 100vh;
-    min-width: 500px;
-    background-color: bisque;
-    margin: 10px auto;
+    width: 15%;
+    background-color: var(--bisque);
+    margin: 1px auto;
     border-radius: 25px;
 
 }
@@ -67,6 +67,7 @@
 
     .main-content-body {
         width: 80%;
+        margin: 1px auto;
     }
 
 }

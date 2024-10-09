@@ -125,6 +125,13 @@
     padding: 10px;
   }
 
+  .sidenav .nav-menu .nav-item-home{
+    background:none;
+  }
+
+  .sidenav .nav-menu .nav-item-home img{
+    width: 30px
+  }
   .sidenav .nav-menu .nav-item a{
     text-decoration: none;
     color: var(--off-white)
@@ -197,7 +204,9 @@
       border-radius: var(--border-radius-circle);
       transform: scaleX(0.2) scaleY(3);
     }
-    
+    .sidenav .nav-menu .nav-item-home img{
+      width: 20px
+    }
 
     .sidenav ul li{
       margin-top: 10px;
