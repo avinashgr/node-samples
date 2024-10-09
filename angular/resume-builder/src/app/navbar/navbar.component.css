@@ -188,7 +188,7 @@
       height:0;
     }
     .sidenav:hover ul {
-      height: 200px;      
+      height: 300px;      
     }
     .sidenav:hover .nav-menu{
       display: block;
