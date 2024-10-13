@@ -1,9 +1,8 @@
-.resume{
-    background: rgb(216, 208, 139);
+.contact{
+    background: rgb(185, 195, 194);
     height: 100%;
+    width: 100%;
     animation: appearSlow 2s ease-in-out 0s 1 normal none;
-    text-align: left;
-    padding:10px;
 }
 @keyframes appearSlow {
     from {

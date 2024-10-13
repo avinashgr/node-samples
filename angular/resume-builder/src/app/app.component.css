@@ -2,8 +2,17 @@
 :host {
     --off-white: oklch(96.76% 0.039 99.53);
     --crazy-white: oklch(100% 0 102.07);
-    --bisque:oklch(93.29% 0.0514 71.85)
-    
+    --center-pane:oklch(93.29% 0.0514 71.85);
+    --left-pane:oklch(90.67% 0.0514 94.24);
+    --right-pane:oklch(90.67% 0.0514 94.24);  
+
+
+
+
+}
+
+:host.main-content-animation{
+    animation: appearSlow 2s ease-in-out 0s 1 normal none;
 }
 *{
     font-family: "Poppins", sans-serif;
@@ -12,7 +21,7 @@
   }
 
 .site-body {
-    padding-top:160px; /*add buffer to account for the header and the image */
+    padding-top:100px; /*add buffer to account for the header and the image */
     height: 100vh;
     overflow: scroll;
     background-color: var(--off-white);
@@ -34,28 +43,30 @@
 .main-content-body {
     height: 100vh;
     width: 70%;
-    background-color: var(--bisque);
+    background-color: var(--center-pane);
     margin: 1px auto;
-    border-radius: 25px;
-
 }
+
+
+
 
 .left-pane {
     height: 100vh;
     width: 10%;
-    background-color: var(--bisque);
-    margin: 2px auto;
-    border-radius: 25px;
+    background-color: var(--left-pane);
+    margin: 1px auto;
+    /* border-radius: 25px; */
 
 }
 .right-pane {
     height: 100vh;
     width: 15%;
-    background-color: var(--bisque);
+    background-color: var(--right-pane);
     margin: 1px auto;
-    border-radius: 25px;
+    /* border-radius: 25px; */
 
 }
+
 @media screen and (max-width: 1500px) {
     .site-body{
         flex-flow: column;
@@ -70,4 +81,15 @@
         margin: 1px auto;
     }
 
+}
+
+@keyframes appearSlow {
+    from {
+       opacity: 0
+    }
+
+    to {
+        opacity: 100;
+    }
+    
 }
