@@ -22,7 +22,7 @@
 
 .site-body {
     padding-top:100px; /*add buffer to account for the header and the image */
-    height: 100vh;
+    height: 100%;
     overflow: scroll;
     background-color: var(--off-white);
     text-align:center;
@@ -41,7 +41,6 @@
 }
 
 .main-content-body {
-    height: 100vh;
     width: 70%;
     background-color: var(--center-pane);
     margin: 1px auto;
@@ -51,7 +50,6 @@
 
 
 .left-pane {
-    height: 100vh;
     width: 10%;
     background-color: var(--left-pane);
     margin: 1px auto;
@@ -59,8 +57,7 @@
 
 }
 .right-pane {
-    height: 100vh;
-    width: 15%;
+    width: 20%;
     background-color: var(--right-pane);
     margin: 1px auto;
     /* border-radius: 25px; */
