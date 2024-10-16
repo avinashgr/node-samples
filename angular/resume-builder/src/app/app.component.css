@@ -23,7 +23,6 @@
 .site-body {
     padding-top:100px; /*add buffer to account for the header and the image */
     height: 100%;
-    overflow: scroll;
     background-color: var(--off-white);
     text-align:center;
     display: flex;
