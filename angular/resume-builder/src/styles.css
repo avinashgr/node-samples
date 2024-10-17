@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+:host {
+    --off-white: ;
+}
 body {
-    margin:0px
+    margin:0px;
+    background-color: oklch(96.76% 0.039 99.53);
+
 }
 
 html,body{

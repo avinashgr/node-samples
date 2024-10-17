@@ -99,8 +99,17 @@
   .logo img{
     height:15vh;
     border-radius: var(--border-radius-circle);
-    border: 10px solid;
+    display: flex;
+    padding: 1vh;
+  }
+  /* for the progress bar */
+  .logo .outer-circle{
+    height: 17vh;
+    width:17vh;
+    border-radius: calc(infinity*1px);
+    background: conic-gradient(var(--off-white) 75%, rgb(49, 48, 48) 75%);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: flex;
   }
 
   .sidenav {
@@ -163,9 +172,7 @@
     .logo {
       text-align: left;
     }
-    .logo img{
-      height:10vh;
-    }
+
     .icon{
       display: block;
       z-index: 50;

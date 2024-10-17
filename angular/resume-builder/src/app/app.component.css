@@ -64,9 +64,7 @@
 }
 
 @media screen and (max-width: 1500px) {
-    .site-body{
-        flex-flow: column;
-    }
+
 
     .left-pane, .right-pane {
         display: none;
