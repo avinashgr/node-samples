@@ -124,7 +124,7 @@
     list-style: none;
   }
   .sidenav ul li{
-    background: var(--gray-400);
+    /* background: var(--gray-400); */
     /* border-radius: var(--border-radius-m); */
     font-size: var(--font-size-m);
     padding:5px 8px;
@@ -147,10 +147,21 @@
   .sidenav .nav-menu .nav-item-home img{
     width: 30px
   }
-  .sidenav .nav-menu .nav-item a{
+  .sidenav .nav-menu .nav-item a {
     text-decoration: none;
+    color: azure;
+
+  }
+  .sidenav .nav-menu .nav-item a:hover, .active {
+    font-weight: bold;
+    font-style: italic;
     color: var(--off-white)
   }
+
+
+
+
+
   .icon{
     display: none;
   }
