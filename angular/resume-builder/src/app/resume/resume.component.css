@@ -1,19 +1,33 @@
 .resume{
-    background: rgb(202, 243, 173);
-    animation: appearSlow 1s ease-in-out 0s 1 normal none;
+    background: rgb(247, 249, 246);
+    /* animation: appearSlow 1s ease-in-out 0s 1 normal none; */
     text-align: left;
-    padding:10px;
+    padding:0px 5px;
+    color: transparent;
+    height: 100%;
 
 }
 
 
+.visible{
+    /* transition: 2s left; */
+    padding: 10px;
+    border-radius: 25px;
+    margin-bottom:10px;
+    background-color: bisque ;
+    animation: appearSlow 1s ease-in-out 0s 1 normal none;
+    color:black
+}
+
+
+
 @keyframes appearSlow {
-    from {
-        background-color: transparent;
-        color: transparent;
-    }
-    to {
-        color: black;
-    }
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+      } to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     
 }

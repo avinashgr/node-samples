@@ -20,6 +20,9 @@
     margin: 0;
   }
 
+.nav {
+   display:block;
+}
 .site-body {
     padding-top:100px; /*add buffer to account for the header and the image */
     height: 100%;
@@ -43,6 +46,7 @@
     width: 70%;
     background-color: var(--center-pane);
     margin: 1px auto;
+
 }
 
 
@@ -59,11 +63,30 @@
     width: 20%;
     background-color: var(--right-pane);
     margin: 1px auto;
+    z-index: 10;
     /* border-radius: 25px; */
 
 }
 
 @media screen and (max-width: 1500px) {
+
+
+    .left-pane, .right-pane {
+        display: none;
+    }
+
+    .main-content-body {
+        width: 95%;
+        margin: 1px auto;
+    }
+
+}
+
+@media print {
+
+    .nav{
+        display:none
+    }
 
 
     .left-pane, .right-pane {
