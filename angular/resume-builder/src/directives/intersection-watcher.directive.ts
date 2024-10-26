@@ -1,9 +1,12 @@
+import { isPlatformServer } from '@angular/common';
 import {   
   Directive,
   ElementRef,
   Input,
   OnInit,
-  Renderer2
+  Renderer2,
+  PLATFORM_ID,
+  Inject
  } from '@angular/core';
 
 @Directive({
@@ -15,9 +18,15 @@ export class IntersectionWatcherDirective implements OnInit {
   @Input() classOnVisible!:string;
   @Input() threshold = 0.3;
   ngOnInit(): void {
-    this.createObserver()
+    if (!isPlatformServer(this.platformId)) {
+      this.createObserver()
+    }    
   }
-  constructor(private element: ElementRef,private renderer: Renderer2) {}
+  constructor(
+    private element: ElementRef,
+    private renderer: Renderer2,
+    @Inject(PLATFORM_ID) private platformId: any
+  ) {}
   createObserver() {
     const options = {
       threshold: this.threshold,

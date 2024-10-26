@@ -9,19 +9,20 @@
 }
 
 
-.visible{
+div .visible{
     /* transition: 2s left; */
+    --animation-order: 1;
     padding: 10px;
     border-radius: 25px;
     margin-bottom:10px;
     background-color: bisque ;
-    animation: appearSlow 1s ease-in-out 0s 1 normal none;
+    animation: calc(var(--animation-order) * 300ms) appearSlow  ease-in-out 0s 1 normal none;
     color:black
 }
 
 
 
-@keyframes appearSlow {
+/* @keyframes appearSlow {
     0% {
         opacity: 0;
         transform: translateX(100px);
@@ -30,4 +31,14 @@
         transform: translateX(0);
       }
     
+} */
+@keyframes appearSlow {
+    0% {
+      opacity: 0;
+      transform:  scale(0.3) translateY(-10px);
+    }
+
+    100% {
+      opacity: 1;
+    }
 }
