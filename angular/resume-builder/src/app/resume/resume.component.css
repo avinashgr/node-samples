@@ -1,3 +1,12 @@
+:host{
+  --gray-900: oklch(19.37% 0.006 300.98);
+  --gray-700: oklch(36.98% 0.014 302.71);
+  --gray-600: oklch(55.93% 0.015 304.04);
+  --gray-400: oklch(70.9% 0.015 304.04);
+}
+*{
+  font-family: 'Monteserrat',sans-serif;
+}
 .resume{
     background: rgb(247, 249, 246);
     /* animation: appearSlow 1s ease-in-out 0s 1 normal none; */
@@ -9,30 +18,50 @@
 }
 
 
-div .visible{
+.section{
     /* transition: 2s left; */
     --animation-order: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
     padding: 10px;
-    border-radius: 25px;
     margin-bottom:10px;
-    background-color: bisque ;
-    animation: calc(var(--animation-order) * 300ms) appearSlow  ease-in-out 0s 1 normal none;
-    color:black
+    opacity: 1;
+    height:50vh;
+    background-color: var(--gray-600) ; 
+
 }
 
 
+/* .section.visible{
+  opacity: 1;
+  animation: calc(var(--animation-order) * 300ms) appearSlow  ease-in-out 0s 1 normal none;
+} */
+.section-header{
+  opacity: 0;
 
-/* @keyframes appearSlow {
+  font-size: 48px;
+  color:rgb(253, 252, 252);
+  height:30px;
+}
+
+
+.section-header.visible{
+  opacity: 1;
+  animation: calc(var(--animation-order) * 300ms) appearSlow  ease-in-out 0s 1 normal none;
+} 
+
+@keyframes appearSlow {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateY(100px);
       } to {
         opacity: 1;
         transform: translateX(0);
       }
     
-} */
-@keyframes appearSlow {
+}
+/* @keyframes appearSlow {
     0% {
       opacity: 0;
       transform:  scale(0.3) translateY(-10px);
@@ -41,4 +70,4 @@ div .visible{
     100% {
       opacity: 1;
     }
-}
+} */
