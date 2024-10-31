@@ -13,46 +13,18 @@ import { ResumeSection } from '../../types/resumesection';
 })
 export class ResumeComponent {
   //add the resume sections here
-  resumeSections:ResumeSection[] = [
-    {
-      id: 1,
-      dateFrom: "",
-      content:"Everybody is innocent until proven guilty"
-    },
-    {
-      id: 1,
-      dateFrom: "",
-      content:"Everybody is innocent until proven guilty"
-    },
-    {
-      id: 1,
-      dateFrom: "",
-      content:"Everybody is innocent until proven guilty"
-    },
-    {
-      id: 1,
-      dateFrom: "",
-      content:"Everybody is innocent until proven guilty"
-    },
-    {
-      id: 1,
-      dateFrom: "",
-      content:"Everybody is innocent until proven guilty"
-    },
-    {
-      id: 1,
-      dateFrom: "",
-      content:"Everybody is innocent until proven guilty"
-    },
-    {
-      id: 1,
-      dateFrom: "",
-      content:"Everybody is innocent until proven guilty"
-    },
-    {
-      id: 1,
-      dateFrom: "",
-      content:"Everybody is innocent until proven guilty"
+  resumeSections:ResumeSection[] = []
+  constructor (){
+
+    for (var i=0; i<=5 ; i++){
+      this.resumeSections.push(
+        {
+          id: 1,
+          dateFrom: "",
+          content:"All men are created equal"
+        }
+      )
     }
-  ]
+  }
+
 }
