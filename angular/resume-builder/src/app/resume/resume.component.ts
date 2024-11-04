@@ -16,7 +16,7 @@ export class ResumeComponent {
   resumeSections:ResumeSection[] = []
   constructor (){
 
-    for (var i=0; i<=5 ; i++){
+    for (var i=0; i<=100 ; i++){
       this.resumeSections.push(
         {
           id: 1,

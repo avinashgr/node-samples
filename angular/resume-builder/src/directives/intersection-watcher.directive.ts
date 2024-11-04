@@ -16,7 +16,7 @@ import {
 
 export class IntersectionWatcherDirective implements OnInit {
   @Input() classOnVisible!:string;
-  @Input() threshold = 1;
+  @Input() threshold = 0.3;
   ngOnInit(): void {
     if (!isPlatformServer(this.platformId)) {
       this.createObserver()
@@ -30,16 +30,18 @@ export class IntersectionWatcherDirective implements OnInit {
   createObserver() {
     const options = {
       threshold: this.threshold,
-      rootMargin:"10px"
+      // rootMargin:"100px"
     };
 
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries &&
-        entries.forEach((entry) => {
+        entries.forEach((entry,order) => {
           if (entry.isIntersecting) {
             // this.renderer.setStyle(this.element.nativeElement, "color", "red")
             this.renderer.addClass(this.element.nativeElement,this.classOnVisible)
             console.log("this is intersecting %s", this.classOnVisible)
+            this.renderer.removeStyle(this.element.nativeElement,'--animation-order')
+            console.log("print the object %o",this.element.nativeElement)
           }
         });
     };

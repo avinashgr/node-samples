@@ -15,6 +15,7 @@ Ornare in leo mus laoreet morbi eget. Molestie eget mollis elit mauris litora ut
         Ornare in leo mus laoreet morbi eget. Molestie eget mollis elit mauris litora ut. Aptent viverra sollicitudin malesuada neque habitant commodo et. Vitae massa dapibus nulla; pellentesque blandit odio himenaeos integer. Nostra fringilla ligula eleifend nisi consequat eu vel praesent habitasse. Dignissim efficitur elit vestibulum urna himenaeos ridiculus turpis nec. Erat per sociosqu lectus dis malesuada venenatis. Fermentum purus morbi consectetur et eu aliquet mi. Libero venenatis purus sociosqu feugiat turpis pellentesque conubia vitae facilisi.
     </div> -->
     <div class="section" *ngFor="let section of resumeSections; let i=index"> 
-        <div class="section-header"  intersectionWatcher [classOnVisible]="'visible'" style="--animation-order:{{i+1}}">{{section.content}}</div>
+        <!-- <div class="section-header"  intersectionWatcher [classOnVisible]="'visible'" style="--animation-order:{{i+1}}">{{section.content}}</div> -->
+        <div class="section-header"  intersectionWatcher [classOnVisible]="'visible'">{{section.content}}</div>
     </div>
 </div>
