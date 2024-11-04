@@ -8,6 +8,10 @@ typescript
 ----------
 starter-project: project to start off a typescript project
 
+project-resume: a dynamic resume template and personal website portal to manage personal profile
+
 angular
 -------
 resume-builder: added as a template for resume building
+
+
