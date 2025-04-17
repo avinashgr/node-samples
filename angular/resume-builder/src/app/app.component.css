@@ -1,122 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
-
-:host {
-    --off-white: oklch(96.76% 0.039 99.53);
-    --crazy-white: oklch(100% 0 102.07);
-    --center-pane:oklch(93.29% 0.0514 71.85);
-    --left-pane:oklch(90.67% 0.0514 94.24);
-    --right-pane:oklch(90.67% 0.0514 94.24);  
-}
-
-:host.main-content-animation{
-    animation: appearSlow 2s ease-in-out 0s 1 normal none;
-}
-*{
-    font-family: "Poppins", sans-serif;
-    padding: 0;
-    margin: 0;
+* {
+    box-sizing: border-box;
   }
-.layout{
-    display: grid;
-    grid-template-rows: 1% 95vh;
-    grid-template-areas:
-    "nav nav, body body";
-}
-.nav {
-   display:block;
-   grid-area: "nav";
-}
-.site-body {
-    padding-top:7vh; /*add buffer to account for the header and the image */
-    height: 100%;
-    /* background-color: var(--off-white); */
+  .navbar{
+    max-width: 1024px;
+    margin: 0 auto;
+    max-height: 8vh;
+    min-height: 7vh;
+
+  }
+
   
-    /* Then we define the flow direction 
-       and if we allow the items to wrap 
-     * Remember this is the same as:
-     * flex-direction: row;
-     * flex-wrap: wrap;
-     */
-    
-    /* Then we define how is distributed the remaining space */
+  .navbar > * {
+    border: 2px solid #f08c00;
+    background-color: #ffec99;
+    border-radius: 5px;
+  }
+  .wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    font:
+      1.2em Helvetica,
+      arial,
+      sans-serif;
+  }
+  
+  .wrapper > * {
+    border: 2px solid #f08c00;
+    background-color: #ffec99;
+    border-radius: 5px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-head {
+    grid-area: header;
+    max-height: 8vh;
+    min-height: 6vh;
+    position: fixed;
+    width: 100%;
+    max-width: 1024px;
+  }
+  .content {
+    grid-area: content;
+  }
+  .main-nav {
+    grid-area: nav;
+  }
+  .side {
+    grid-area: sidebar;
+  }
+  .ad {
+    grid-area: ad;
+  }
+  .main-footer {
+    grid-area: footer;
+  }
+  
+  .wrapper {
     display: grid;
-    /* grid-template-columns: repeat(3, 1fr); */
-    grid-template-columns: 1fr 5fr 1fr;
+    gap: 3px;
     grid-template-areas:
-    "a b c";
-    grid-area: "body";
+      "content"
+      "sidebar"
+      "ad"
+      "footer";
+    height: 100vh;
+    grid-auto-rows: max-content;
+  }
+  
+  @media (min-width: 500px) {
 
-}
-
-.main-content-body {
-    background-color: var(--center-pane);
-    grid-area: b;
-}
-
-
-
-
-.left-pane {
-    background-color: var(--left-pane);
-    /* border-radius: 25px; */
-    grid-area: a;
-
-}
-.right-pane {
-    background-color: var(--right-pane);
-    z-index: 10;
-    /* border-radius: 25px; */
-    grid-area: c;
-
-}
-
-@media screen and (max-width: 1500px) {
-
-    .site-body {
-        padding-top:6vh;
-        display: grid;
-        grid-template-columns: 0fr 4fr 0fr;
-        grid-template-areas:
-        "a b c"
+    .wrapper {
+      grid-template-columns: 1fr 3fr;
+      grid-template-areas:
+        "sidebar content"
+        "ad      footer";
     }
+    nav ul {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  @media (min-width: 700px) {
+
+    .wrapper {
+      grid-template-columns: 4fr 1fr;
+      grid-template-areas:
+        "content sidebar"
+        "content ad"
+        "footer  footer";
     
-
-    .left-pane, .right-pane {
-        display: none;
     }
-
-    .main-content-body {
-        width: 100%;
-        margin: 1px auto;
+    nav ul {
+      flex-direction: column;
     }
-
-}
-
-@media print {
-
-    .nav{
-        display:none
-    }
-
-
-    .left-pane, .right-pane {
-        display: none;
-    }
-
-    .main-content-body {
-        margin: 1px auto;
-    }
-
-}
-
-@keyframes appearSlow {
-    from {
-       opacity: 0
-    }
-
-    to {
-        opacity: 100;
-    }
-    
-}
+  }
+  

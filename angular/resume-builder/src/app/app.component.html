@@ -1,20 +1,14 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div class="layout">
-    <div class="nav">
-        <app-navbar></app-navbar>
-    </div>
-    <div class="site-body">
-        <div class="left-pane">sdasdasdasd</div>
-        <div class="main-content-body">
-            <router-outlet></router-outlet>
-        </div>
-        <div class="right-pane">sdasdasdasd</div>
-    </div>
 
+<div class="navbar">
+    <app-navbar class="main-head"/>
+</div>
+<div class="wrapper">
+
+
+  <article class="content">
+    <router-outlet></router-outlet>
+  </article>
+  <aside class="side">Sidebar</aside>
+  <div class="ad">Advertising</div>
+  <footer class="main-footer">The footer</footer>
 </div>

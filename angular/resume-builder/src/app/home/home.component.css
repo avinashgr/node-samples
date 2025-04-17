@@ -1,0 +1,50 @@
+:host{
+    --main-content: oklch(19.37% 0.006 300.98);
+    --background:oklch(0.68 0.0035 17.24); 
+    --background-card:oklch(96.76% 0.039 99.53);
+}
+
+
+.home{
+    background:var(--background);
+    margin: 0px 10px;
+    animation: appearSlow 2s ease-in-out 0s 1 normal none;
+    height: 90vh;
+    padding: 1vh;
+}
+
+@keyframes appearSlow {
+    from {        
+    }
+    to {
+    }
+    
+}
+
+.card{
+    --animation-start:2s;
+    font-size: 20px;
+    animation: floatUp var(--animation-start) ease-in-out 0s 1 normal none;
+    background-color: var(--background-card);
+    margin-top: 25px;
+    min-height:10vh;
+    padding:1em
+  } 
+  
+  @keyframes floatUp {
+      0% {
+          opacity:0;
+          transform: translateX(15px);
+        } to {
+          opacity:1;
+          transform: translateX(0);
+        }
+      
+  }
+
+  @media screen and (max-width: 1500px) {
+    .home{
+        padding-top: 10vh;
+    }    
+
+  }

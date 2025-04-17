@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+
+:host {
+    --off-white: oklch(96.76% 0.039 99.53);
+    --crazy-white: oklch(100% 0 102.07);
+    --center-pane:oklch(93.29% 0.0514 71.85);
+    /* --left-pane:oklch(90.67% 0.0514 94.24);
+    --right-pane:oklch(90.67% 0.0514 94.24);   */
+    --left-pane:oklch(1 0 101);
+    --right-pane:oklch(1 0 101); 
+ 
+}
+
+:host.main-content-animation{
+    animation: appearSlow 2s ease-in-out 0s 1 normal none;
+}
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+.layout{
+    display: grid;
+    grid-template-rows: 1% 95vh;
+}
+.nav {
+   display:block;
+   grid-area: "nav";
+}
+.site-body {
+    padding-top:7vh; /*add buffer to account for the header and the image */
+    height: 100%;
+    /* background-color: var(--off-white); */
+  
+    /* Then we define the flow direction 
+       and if we allow the items to wrap 
+     * Remember this is the same as:
+     * flex-direction: row;
+     * flex-wrap: wrap;
+     */
+    
+    /* Then we define how is distributed the remaining space */
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-areas:
+    "a b c";
+    grid-area: "body";
+
+}
+
+.main-content-body {
+    /* background-color: var(--center-pane); */
+    grid-area: b;
+}
+
+
+
+
+.left-pane {
+    background-color: var(--left-pane);
+    /* border-radius: 25px; */
+    grid-area: a;
+
+}
+.right-pane {
+    background-color: var(--right-pane);
+    z-index: 10;
+    /* border-radius: 25px; */
+    grid-area: c;
+
+}
+
+@media screen and (max-width: 1500px) {
+
+    .site-body {
+        padding-top:6vh;
+        display: grid;
+        grid-template-columns: 0fr 4fr 0fr;
+        grid-template-areas:
+        "a b c"
+    }
+    
+
+    .left-pane, .right-pane {
+        display: none;
+    }
+
+    .main-content-body {
+        width: 100%;
+        margin: 1px auto;
+    }
+
+}
+
+@media print {
+
+    .nav{
+        display:none
+    }
+
+
+    .left-pane, .right-pane {
+        display: none;
+    }
+
+    .main-content-body {
+        margin: 1px auto;
+    }
+
+}
+
+@keyframes appearSlow {
+    from {
+       opacity: 0
+    }
+
+    to {
+        opacity: 100;
+    }
+    
+}

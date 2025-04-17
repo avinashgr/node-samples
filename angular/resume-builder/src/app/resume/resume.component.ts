@@ -7,7 +7,7 @@ import { ResumeSection } from '../../types/resumesection';
 @Component({
   selector: 'app-resume',
   standalone: true,
-  imports: [NavbarComponent,IntersectionWatcherDirective,NgFor],
+  imports: [IntersectionWatcherDirective,NgFor],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.css'
 })

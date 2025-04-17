@@ -28,7 +28,7 @@
     padding: 5px;
     opacity: 1;
     height:90vh;
-    background-color: var(--gray-600) ; 
+    background-color: var(--gray-400) ; 
 
 }
 
@@ -45,10 +45,10 @@
 
 .section-header.visible{
   opacity: 1;
-  animation: calc(var(--animation-order) * 1s) appearSlow  ease-in-out 0s 1 normal none;
+  animation: calc(var(--animation-order) * 1s) floatUp  ease-in-out 0s 1 normal none;
 } 
 
-@keyframes appearSlow {
+@keyframes floatUp {
     0% {
         opacity: 0;
         transform: translateY(100px);
